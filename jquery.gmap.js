@@ -96,7 +96,7 @@
       $gmap.setMapTypeId(google.maps.MapTypeId[opts.maptype]);
 
       // Set scrollwheel option
-      var map_options = { scrollwheel: opts.scrollwheel, disableDoubleClickZoom: !opts.doubleclickzoom };
+      var map_options = { scrollwheel: opts.scrollwheel, disableDoubleClickZoom: !opts.doubleclickzoom , styles: opts.styles};
       // Check for map controls
       if(opts.controls === false){
         $.extend(map_options, { disableDefaultUI: true });
@@ -266,7 +266,8 @@
       shadowsize: [37, 34],
       iconanchor: [9, 34],
       shadowanchor: [6, 34]
-    }
+    },
+	styles:[]
   };
 
 })(jQuery);
